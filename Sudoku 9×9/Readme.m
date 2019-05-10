@@ -1,8 +1,21 @@
 (* ::Package:: *)
 
+(* ::Section:: *)
+(*Settings*)
+
+
 SetDirectory@NotebookDirectory[];
+
+
+(* ::Section:: *)
+(*Template*)
+
+
 text = StringTemplate["Third-Order Sudoku
 ==================
+
+![](https://img.shields.io/badge/Date-`Data`-orange.svg?style=flat-square)
+![](https://img.shields.io/badge/Puzzles-`Puzzles`-FF69B4.svg?style=flat-square)
 
 ## Standard Form
 
@@ -27,30 +40,36 @@ text = StringTemplate["Third-Order Sudoku
 ## Details
 
 `FileInfo`
-
 "];
 
 
+(* ::Section:: *)
+(*Functions*)
 
+
+intFormat = StringRiffle[Reverse[Reverse /@ Partition[Reverse@IntegerDigits[#, 10], UpTo@4]], ",", ""]&;
+puzzles = Tr[Round[("ByteCount" /. FileInformation@#) / 83]& /@ FileNames["Sudoku*", ""]];
 getInfo[file_] := GeneralUtilities`Scope[
 	byte = "ByteCount" /. FileInformation[file];
 	<|
-		"Hints" -> FileBaseName[file],
+		"Hints" -> StringTake[FileBaseName[file],7;;All],
 		"FileSize" -> ToString@Ceiling[N[byte / 1024^2], 0.001] <> " MB",
-		"Puzzles" -> Round[byte / 83]
+		"Puzzles" -> intFormat@Round[byte / 83]
 	|>
 ];
 elements = Join[
 	{Keys@getInfo["Sudoku17.txt"], {":-", "-:", "-:"}},
 	Values@getInfo@#& /@ FileNames["Sudoku*", ""]
 ];
+
+
+(* ::Section:: *)
+(*Build*)
+
+
 readme = text[<|
+	"Data" -> URLEncode@StringReplace[DateString["ISODate"], "-" -> " "],
+	"Puzzles" -> URLEncode[intFormat@puzzles],
 	"FileInfo" -> StringRiffle[elements, "\n", "|"]
 |>];
-
-
 Export["Readme.md", readme, "Text"]
-
-
-
-

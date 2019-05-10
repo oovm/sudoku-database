@@ -1,6 +1,9 @@
 Third-Order Sudoku
 ==================
 
+![](https://img.shields.io/badge/Date-2019%2005%2010-orange.svg?style=flat-square)
+![](https://img.shields.io/badge/Puzzles-104%2C9151-FF69B4.svg?style=flat-square)
+
 ## Standard Form
 
 0 表示需要求解的数字, 1-9 表示已有的数字
@@ -23,16 +26,15 @@ Third-Order Sudoku
 
 ## Details
 
-| Hints    |  FileSize | Puzzles |
-| :------- | --------: | ------: |
-| Sudoku17 |  3.891 MB |   49151 |
-| Sudoku29 |  0.003 MB |      28 |
-| Sudoku30 |  0.042 MB |     526 |
-| Sudoku31 |  0.614 MB |    7748 |
-| Sudoku32 |  4.839 MB |   61122 |
-| Sudoku33 | 20.891 MB |  263913 |
-| Sudoku34 | 36.016 MB |  455004 |
-| Sudoku35 | 15.748 MB |  198940 |
-| Sudoku36 |  1.003 MB |   12662 |
-| Sudoku37 |  0.005 MB |      57 |
-
+| Hints |  FileSize | Puzzles |
+| :---- | --------: | ------: |
+| 17    |  3.891 MB |  4,9151 |
+| 29    |  0.003 MB |      28 |
+| 30    |  0.042 MB |     526 |
+| 31    |  0.614 MB |    7748 |
+| 32    |  4.839 MB |  6,1122 |
+| 33    | 20.891 MB | 26,3913 |
+| 34    | 36.016 MB | 45,5004 |
+| 35    | 15.748 MB | 19,8940 |
+| 36    |  1.003 MB |  1,2662 |
+| 37    |  0.005 MB |      57 |
