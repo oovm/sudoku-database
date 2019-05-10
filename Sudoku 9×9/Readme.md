@@ -21,3 +21,18 @@ Third-Order Sudoku
 
 导出数据, 计算问题难度.
 
+## Details
+
+| Hints    |  FileSize | Puzzles |
+| :------- | --------: | ------: |
+| Sudoku17 |  3.891 MB |   49151 |
+| Sudoku29 |  0.003 MB |      28 |
+| Sudoku30 |  0.042 MB |     526 |
+| Sudoku31 |  0.614 MB |    7748 |
+| Sudoku32 |  4.839 MB |   61122 |
+| Sudoku33 | 20.891 MB |  263913 |
+| Sudoku34 | 36.016 MB |  455004 |
+| Sudoku35 | 15.748 MB |  198940 |
+| Sudoku36 |  1.003 MB |   12662 |
+| Sudoku37 |  0.005 MB |      57 |
+
